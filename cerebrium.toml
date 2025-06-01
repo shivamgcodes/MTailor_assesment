@@ -7,9 +7,9 @@ shell_commands = [""]
 
 [cerebrium.hardware]
 cpu = 4
-memory = 8.0
-compute = "CPU"
-gpu_count = 0
+memory = 32.0
+compute = "TURING_T4"
+gpu_count = 1
 provider = "aws"
 region = "us-east-1"
 

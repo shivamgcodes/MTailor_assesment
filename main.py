@@ -33,3 +33,13 @@ async def predict(file: UploadFile = File(...)):
     predicted_class = preds.argmax(axis=1)
 
     return JSONResponse({"predicted class": predicted_class.item()})
+
+
+@app.get("/health")
+def health():
+    return "OK"
+
+@app.get("/test")
+def test():
+    from test import results
+    return JSONResponse({"results": results})
